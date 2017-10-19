@@ -1,0 +1,83 @@
+@import '../node_modules/sass-bem/bem';
+@import 'colors';
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline('fonts/orkney-light-webfont.woff2') format('woff2'),
+       inline('fonts/orkney-light-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline('fonts/orkney-regular-webfont.woff2') format('woff2'),
+       inline('fonts/orkney-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline('fonts/orkney-medium-webfont.woff2') format('woff2'),
+       inline('fonts/orkney-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline('fonts/orkney-bold-webfont.woff2') format('woff2'),
+       inline('fonts/orkney-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+body {
+  align-items: center;
+  background-color: $grey;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
+@include b('message') {
+  background-color: $light-grey;
+  border-top: 1rem solid $orange;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba($warm-black, 0.5);
+  box-sizing: border-box;
+  color: $warm-black;
+  font-family: Orkney;
+  height: 90vmin;
+  padding: 3rem;
+  text-align: center;
+  width: 90vmin;
+
+  * {
+    box-sizing: inherit;
+  }
+
+  @include e('divider') {
+    background-color: $grey;
+    border: 0;
+    height: 0.2rem;
+    width: 100%;
+  }
+}
+
+@include b('mymercer-logo') {
+  height: auto;
+  width: 80%;
+  @include e('my') {
+    fill: $orange;
+  }
+  @include e('mercer') {
+    fill: $warm-black;
+  }
+}

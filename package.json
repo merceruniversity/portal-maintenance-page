@@ -1,0 +1,31 @@
+{
+  "name": "portal-maintenance-page",
+  "version": "1.0.0",
+  "description": "When the portal is down, this is shown",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass scss/index.scss test/css/index.css",
+    "postbuild": "postcss test/css/index.css -u postcss-assets autoprefixer -o test/css/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InteractiveDesignAndDevelopment/portal-maintenance-page.git"
+  },
+  "author": "Interactive Design & Development",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InteractiveDesignAndDevelopment/portal-maintenance-page/issues"
+  },
+  "homepage": "https://github.com/InteractiveDesignAndDevelopment/portal-maintenance-page#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.5",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-assets": "^5.0.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-font-base64": "^1.0.4",
+    "rimraf": "^2.6.2",
+    "sass-bem": "^2.6.5"
+  }
+}
