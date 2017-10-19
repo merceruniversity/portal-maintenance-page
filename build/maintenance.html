@@ -1,4 +1,466 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="refresh" content="60"> -->
+  <title>Don't Panic! We're just doing upgrades.</title>
+  <!-- <link href="./css/normalize.css" rel="stylesheet"> -->
+  <!-- <link href="./css/index.css" rel="stylesheet"> -->
+  <style>
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
 /*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
+  </style>
+  <style>
+    /*
  * _colors.scss
  *
  * Author: Interactive Design & Development
@@ -74,4 +536,39 @@ body {
   .mymercer-logo__mercer {
     fill: #3f3c3b; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7O0dBTUc7QUFDSDtFQUNFLHNCQUFzQjtFQUN0QixzMnpEQUEwSDtFQUMxSCxpQkFBaUI7RUFDakIsbUJBQW1CLEVBQUU7O0FBRXZCO0VBQ0Usc0JBQXNCO0VBQ3RCLDh6MURBQThIO0VBQzlILGlCQUFpQjtFQUNqQixtQkFBbUIsRUFBRTs7QUFFdkI7RUFDRSxzQkFBc0I7RUFDdEIsOHUxREFBNEg7RUFDNUgsaUJBQWlCO0VBQ2pCLG1CQUFtQixFQUFFOztBQUV2QjtFQUNFLHNCQUFzQjtFQUN0QiwwdzNEQUF3SDtFQUN4SCxpQkFBaUI7RUFDakIsbUJBQW1CLEVBQUU7O0FBRXZCO0VBQ0UsMEJBQW9CO01BQXBCLHVCQUFvQjtVQUFwQixvQkFBb0I7RUFDcEIsMEJBQTBCO0VBQzFCLHFCQUFjO0VBQWQscUJBQWM7RUFBZCxjQUFjO0VBQ2QsY0FBYztFQUNkLHlCQUF3QjtNQUF4QixzQkFBd0I7VUFBeEIsd0JBQXdCO0VBQ3hCLGlCQUFpQjtFQUNqQixhQUFhLEVBQUU7O0FBRWpCO0VBQ0UsMEJBQTBCO0VBQzFCLCtCQUErQjtFQUMvQixzRUFBOEQ7VUFBOUQsOERBQThEO0VBQzlELCtCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkIsZUFBZTtFQUNmLG9CQUFvQjtFQUNwQixlQUFlO0VBQ2YsY0FBYztFQUNkLG1CQUFtQjtFQUNuQixjQUFjLEVBQUU7RUFDaEI7SUFDRSw0QkFBb0I7WUFBcEIsb0JBQW9CLEVBQUU7RUFDeEI7SUFDRSwwQkFBMEI7SUFDMUIsVUFBVTtJQUNWLGVBQWU7SUFDZixZQUFZLEVBQUU7O0FBRWxCO0VBQ0UsYUFBYTtFQUNiLFdBQVcsRUFBRTtFQUNiO0lBQ0UsY0FBYyxFQUFFO0VBQ2xCO0lBQ0UsY0FBYyxFQUFFIiwiZmlsZSI6ImluZGV4LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbiAqIF9jb2xvcnMuc2Nzc1xyXG4gKlxyXG4gKiBBdXRob3I6IEludGVyYWN0aXZlIERlc2lnbiAmIERldmVsb3BtZW50XHJcbiAqIEF1dGhvciBVUkk6IGh0dHBzOi8vZ2l0aHViLmNvbS9JbnRlcmFjdGl2ZURlc2lnbkFuZERldmVsb3BtZW50XHJcbiAqIERlc2NyaXB0aW9uOiBEZWZpbmUgY29sb3JzIGZvciB0aGUgcG9ydGFsIHJld29ya1xyXG4gKi9cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ09ya25leSc7XG4gIHNyYzogaW5saW5lKFwiZm9udHMvb3JrbmV5LWxpZ2h0LXdlYmZvbnQud29mZjJcIikgZm9ybWF0KFwid29mZjJcIiksIGlubGluZShcImZvbnRzL29ya25leS1saWdodC13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcbiAgZm9udC13ZWlnaHQ6IDEwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsOyB9XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ09ya25leSc7XG4gIHNyYzogaW5saW5lKFwiZm9udHMvb3JrbmV5LXJlZ3VsYXItd2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgaW5saW5lKFwiZm9udHMvb3JrbmV5LXJlZ3VsYXItd2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDsgfVxuXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdPcmtuZXknO1xuICBzcmM6IGlubGluZShcImZvbnRzL29ya25leS1tZWRpdW0td2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgaW5saW5lKFwiZm9udHMvb3JrbmV5LW1lZGl1bS13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsOyB9XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ09ya25leSc7XG4gIHNyYzogaW5saW5lKFwiZm9udHMvb3JrbmV5LWJvbGQtd2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgaW5saW5lKFwiZm9udHMvb3JrbmV5LWJvbGQtd2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDsgfVxuXG5ib2R5IHtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2QzY2JjNjtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdpZHRoOiAxMDB2dzsgfVxuXG4ubWVzc2FnZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmNGYyZjE7XG4gIGJvcmRlci10b3A6IDFyZW0gc29saWQgI2M5NTEwNjtcbiAgYm94LXNoYWRvdzogMC4ycmVtIDAuMnJlbSAwLjJyZW0gMC4xcmVtIHJnYmEoNjMsIDYwLCA1OSwgMC41KTtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgY29sb3I6ICMzZjNjM2I7XG4gIGZvbnQtZmFtaWx5OiBPcmtuZXk7XG4gIGhlaWdodDogOTB2bWluO1xuICBwYWRkaW5nOiAzcmVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiA5MHZtaW47IH1cbiAgLm1lc3NhZ2UgKiB7XG4gICAgYm94LXNpemluZzogaW5oZXJpdDsgfVxuICAubWVzc2FnZV9fZGl2aWRlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2QzY2JjNjtcbiAgICBib3JkZXI6IDA7XG4gICAgaGVpZ2h0OiAwLjJyZW07XG4gICAgd2lkdGg6IDEwMCU7IH1cblxuLm15bWVyY2VyLWxvZ28ge1xuICBoZWlnaHQ6IGF1dG87XG4gIHdpZHRoOiA4MCU7IH1cbiAgLm15bWVyY2VyLWxvZ29fX215IHtcbiAgICBmaWxsOiAjYzk1MTA2OyB9XG4gIC5teW1lcmNlci1sb2dvX19tZXJjZXIge1xuICAgIGZpbGw6ICMzZjNjM2I7IH1cbiJdfQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW50ZW5hbmNlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7O0dBTUc7QUFDSDtFQUNFLHNCQUFzQjtFQUN0QixzMnpEQUE4RztFQUM5RyxpQkFBaUI7RUFDakIsbUJBQW1CLEVBQUU7O0FBRXZCO0VBQ0Usc0JBQXNCO0VBQ3RCLDh6MURBQWtIO0VBQ2xILGlCQUFpQjtFQUNqQixtQkFBbUIsRUFBRTs7QUFFdkI7RUFDRSxzQkFBc0I7RUFDdEIsOHUxREFBZ0g7RUFDaEgsaUJBQWlCO0VBQ2pCLG1CQUFtQixFQUFFOztBQUV2QjtFQUNFLHNCQUFzQjtFQUN0QiwwdzNEQUE0RztFQUM1RyxpQkFBaUI7RUFDakIsbUJBQW1CLEVBQUU7O0FBRXZCO0VBQ0UsMEJBQW9CO01BQXBCLHVCQUFvQjtVQUFwQixvQkFBb0I7RUFDcEIsMEJBQTBCO0VBQzFCLHFCQUFjO0VBQWQscUJBQWM7RUFBZCxjQUFjO0VBQ2QsY0FBYztFQUNkLHlCQUF3QjtNQUF4QixzQkFBd0I7VUFBeEIsd0JBQXdCO0VBQ3hCLGlCQUFpQjtFQUNqQixhQUFhLEVBQUU7O0FBRWpCO0VBQ0UsMEJBQTBCO0VBQzFCLCtCQUErQjtFQUMvQixzRUFBOEQ7VUFBOUQsOERBQThEO0VBQzlELCtCQUF1QjtVQUF2Qix1QkFBdUI7RUFDdkIsZUFBZTtFQUNmLG9CQUFvQjtFQUNwQixlQUFlO0VBQ2YsY0FBYztFQUNkLG1CQUFtQjtFQUNuQixjQUFjLEVBQUU7RUFDaEI7SUFDRSw0QkFBb0I7WUFBcEIsb0JBQW9CLEVBQUU7RUFDeEI7SUFDRSwwQkFBMEI7SUFDMUIsVUFBVTtJQUNWLGVBQWU7SUFDZixZQUFZLEVBQUU7O0FBRWxCO0VBQ0UsYUFBYTtFQUNiLFdBQVcsRUFBRTtFQUNiO0lBQ0UsY0FBYyxFQUFFO0VBQ2xCO0lBQ0UsY0FBYyxFQUFFIiwiZmlsZSI6Im1haW50ZW5hbmNlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbiAqIF9jb2xvcnMuc2Nzc1xyXG4gKlxyXG4gKiBBdXRob3I6IEludGVyYWN0aXZlIERlc2lnbiAmIERldmVsb3BtZW50XHJcbiAqIEF1dGhvciBVUkk6IGh0dHBzOi8vZ2l0aHViLmNvbS9JbnRlcmFjdGl2ZURlc2lnbkFuZERldmVsb3BtZW50XHJcbiAqIERlc2NyaXB0aW9uOiBEZWZpbmUgY29sb3JzIGZvciB0aGUgcG9ydGFsIHJld29ya1xyXG4gKi9cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ09ya25leSc7XG4gIHNyYzogaW5saW5lKFwib3JrbmV5LWxpZ2h0LXdlYmZvbnQud29mZjJcIikgZm9ybWF0KFwid29mZjJcIiksIGlubGluZShcIm9ya25leS1saWdodC13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcbiAgZm9udC13ZWlnaHQ6IDEwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsOyB9XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ09ya25leSc7XG4gIHNyYzogaW5saW5lKFwib3JrbmV5LXJlZ3VsYXItd2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgaW5saW5lKFwib3JrbmV5LXJlZ3VsYXItd2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDsgfVxuXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdPcmtuZXknO1xuICBzcmM6IGlubGluZShcIm9ya25leS1tZWRpdW0td2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgaW5saW5lKFwib3JrbmV5LW1lZGl1bS13ZWJmb250LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsOyB9XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ09ya25leSc7XG4gIHNyYzogaW5saW5lKFwib3JrbmV5LWJvbGQtd2ViZm9udC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgaW5saW5lKFwib3JrbmV5LWJvbGQtd2ViZm9udC53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDsgfVxuXG5ib2R5IHtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2QzY2JjNjtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdpZHRoOiAxMDB2dzsgfVxuXG4ubWVzc2FnZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmNGYyZjE7XG4gIGJvcmRlci10b3A6IDFyZW0gc29saWQgI2M5NTEwNjtcbiAgYm94LXNoYWRvdzogMC4ycmVtIDAuMnJlbSAwLjJyZW0gMC4xcmVtIHJnYmEoNjMsIDYwLCA1OSwgMC41KTtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgY29sb3I6ICMzZjNjM2I7XG4gIGZvbnQtZmFtaWx5OiBPcmtuZXk7XG4gIGhlaWdodDogOTB2bWluO1xuICBwYWRkaW5nOiAzcmVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHdpZHRoOiA5MHZtaW47IH1cbiAgLm1lc3NhZ2UgKiB7XG4gICAgYm94LXNpemluZzogaW5oZXJpdDsgfVxuICAubWVzc2FnZV9fZGl2aWRlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2QzY2JjNjtcbiAgICBib3JkZXI6IDA7XG4gICAgaGVpZ2h0OiAwLjJyZW07XG4gICAgd2lkdGg6IDEwMCU7IH1cblxuLm15bWVyY2VyLWxvZ28ge1xuICBoZWlnaHQ6IGF1dG87XG4gIHdpZHRoOiA4MCU7IH1cbiAgLm15bWVyY2VyLWxvZ29fX215IHtcbiAgICBmaWxsOiAjYzk1MTA2OyB9XG4gIC5teW1lcmNlci1sb2dvX19tZXJjZXIge1xuICAgIGZpbGw6ICMzZjNjM2I7IH1cbiJdfQ== */
+  </style>
+</head>
+
+<body>
+  <main class="message">
+
+    <svg class="mymercer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325.19 70.427">
+      <g class="mymercer-logo__my">
+        <path d="M0 0v52.5h6.37V9.3L26.4 39.63 46.62 9.24V52.5h6.3V0H46.2L26.46 29.26 6.8 0M88.27 17.5v21.14c0 2.52-.9 4.66-2.73 6.4-1.82 1.76-4.04 2.63-6.65 2.63-2.58 0-4.75-.87-6.52-2.62-1.77-1.75-2.66-3.9-2.66-6.4V17.5h-6.16v21.77c0 3.88 1.33 7.17 4 9.87 2.65 2.7 5.92 4.06 9.8 4.06 4.47 0 8.1-1.72 10.9-5.18v5.4c0 3.63-.84 6.46-2.54 8.47-1.7 2-4.24 3-7.6 3-4.95 0-9.17-1.52-12.67-4.55v6.72c3.45 2.24 7.5 3.36 12.18 3.36 5.4 0 9.58-1.58 12.5-4.73 2.9-3.15 4.37-7.24 4.37-12.28V17.5z"
+        />
+      </g>
+      <g class="mymercer-logo__mercer">
+        <path d="M103.5 0v52.5h6.37V9.3l20.02 30.32L150.1 9.24V52.5h6.3V0h-6.72l-19.74 29.26L110.3 0M181.13 16.8c-5.04 0-9.08 1.72-12.1 5.15-3.04 3.43-4.56 7.8-4.56 13.12 0 5.32 1.5 9.68 4.5 13.06 3.03 3.38 7.07 5.07 12.16 5.07 6.44 0 11.18-2.73 14.2-8.2L191 42c-1.4 2.15-2.82 3.66-4.27 4.52-1.45.86-3.24 1.3-5.4 1.3-3.16 0-5.68-.97-7.55-2.9-1.87-1.95-2.97-4.57-3.3-7.9h26.47c.05-.45.07-1.13.07-2.02 0-5.4-1.42-9.8-4.27-13.16-2.85-3.36-6.72-5.04-11.62-5.04zm-10.5 15.4c.47-3.08 1.6-5.53 3.43-7.35 1.82-1.82 4.22-2.73 7.2-2.73 2.95 0 5.3.9 7.05 2.7 1.76 1.8 2.8 4.26 3.12 7.38zM211.02 22.82l-.28-5.32h-5.67v35h6.16V32.9c0-3.03 1-5.56 2.98-7.6 2-2.02 4.3-3.04 6.9-3.04 1.92 0 3.55.38 4.9 1.12l3-4.48c-1.85-1.4-4.4-2.1-7.62-2.1-4.1 0-7.56 2-10.36 6.02zM234.47 21.9c-3 3.42-4.48 7.78-4.48 13.1 0 5.32 1.48 9.7 4.47 13.1 3 3.4 7 5.1 12.04 5.1 3.6 0 6.6-.95 9.04-2.87v-6.16c-2.2 2.52-5 3.78-8.4 3.78-3.4 0-6.1-1.2-8.1-3.64-1.97-2.4-2.96-5.52-2.96-9.3 0-3.78 1-6.88 2.97-9.3 2-2.44 4.68-3.65 8.1-3.65 3.3 0 6.1 1.26 8.4 3.78V19.6c-2.44-1.87-5.45-2.8-9.04-2.8-5.03 0-9.04 1.7-12.03 5.1zM277.3 16.8c-5.03 0-9.07 1.72-12.1 5.15-3.04 3.43-4.55 7.8-4.55 13.12 0 5.32 1.5 9.68 4.5 13.06 3.03 3.38 7.07 5.07 12.16 5.07 6.45 0 11.2-2.73 14.22-8.2l-4.34-3c-1.4 2.15-2.82 3.66-4.27 4.52-1.44.86-3.23 1.3-5.38 1.3-3.17 0-5.7-.97-7.56-2.9-1.87-1.95-2.97-4.57-3.3-7.9h26.47c.05-.45.07-1.13.07-2.02 0-5.4-1.42-9.8-4.27-13.16-2.85-3.36-6.72-5.04-11.62-5.04zm-10.5 15.4c.48-3.08 1.62-5.53 3.44-7.35 1.82-1.82 4.22-2.73 7.2-2.73 2.95 0 5.3.9 7.05 2.7 1.74 1.8 2.77 4.26 3.1 7.38zM317.56 16.8c-4.1 0-7.56 2-10.36 6.02l-.28-5.32h-5.67v35h6.16V32.9c0-3.03 1-5.56 2.98-7.6 2-2.02 4.3-3.04 6.9-3.04 1.9 0 3.55.38 4.9 1.12l3-4.48c-1.86-1.4-4.4-2.1-7.62-2.1z"
+        />
+      </g>
+    </svg>
+
+    <hr class="message__divider">
+
+    <h1 class="message__title">Dont't Panic!</h1>
+
+    <h2 class="message__subtitle">We're just doing upgrades.</h2>
+
+    <p class="message__paragraph">
+      This page refreshes automatically, you'll know as soon as we're back.
+    </p>
+
+    <aside class="message__aside">
+      (Which should be around 4am. You should probably go to sleep.)
+    </aside>
+
+  </main>
+</body>
+
+</html>

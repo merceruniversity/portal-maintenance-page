@@ -4,9 +4,13 @@
   "description": "When the portal is down, this is shown",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass scss/index.scss test/css/index.css",
-    "postbuild": "postcss test/css/index.css -u postcss-assets autoprefixer -o test/css/index.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "run-s clean",
+    "build": "node-sass src/maintenance.scss src/maintenance.css",
+    "postbuild": "run-s postbuild:*",
+    "postbuild:css": "postcss src/maintenance.css -u postcss-assets autoprefixer -o src/maintenance.css",
+    "postbuild:include": "gulp fileinclude",
+    "test": "live-server build",
+    "clean": "rimraf build && mkdirp build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
   "homepage": "https://github.com/InteractiveDesignAndDevelopment/portal-maintenance-page#readme",
   "dependencies": {
     "autoprefixer": "^7.1.5",
+    "gulp-file-include": "^1.2.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
     "postcss-assets": "^5.0.0",
