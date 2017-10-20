@@ -4,7 +4,8 @@ gulp = require('gulp');
 gulp.task('fileinclude', function() {
   gulp.src(['src/maintenance.html'])
     .pipe(fileinclude({
-      prefix: '@@',
+      prefix: '\\/\\*@@',
+      suffix: '\\*\\/',
       basepath: '@file'
     }))
     .pipe(gulp.dest('build'));

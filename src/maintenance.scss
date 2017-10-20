@@ -1,5 +1,14 @@
+/*! maintenance.scss */
+
 @import '../node_modules/sass-bem/bem';
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'colors';
+
+// We can use all of the Breakpoint control variables with respond-to as well!
+$breakpoint-no-query-fallbacks: true;
+$breakpoint-to-ems: true;
+
+$breakpoints: add-breakpoint('large screen', 768px);
 
 @font-face {
   font-family: 'Orkney';
@@ -44,19 +53,22 @@ body {
 }
 
 @include b('message') {
-  background-color: $light-grey;
-  border-top: 1rem solid $orange;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba($warm-black, 0.5);
-  box-sizing: border-box;
   color: $warm-black;
   font-family: Orkney;
-  height: 90vmin;
-  padding: 3rem;
   text-align: center;
-  width: 90vmin;
 
-  * {
-    box-sizing: inherit;
+  @include respond-to('large screen') {
+    background-color: $light-grey;
+    border-top: 1rem solid $orange;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba($warm-black, 0.5);
+    box-sizing: border-box;
+    height: 90vmin;
+    padding: 3rem;
+    width: 90vmin;
+
+    * {
+      box-sizing: inherit;
+    }
   }
 
   @include e('divider') {
