@@ -69,9 +69,8 @@ body {
 @include b('message') {
   color: $warm-black;
   font-family: Orkney;
-  height: 90vmin;
   text-align: center;
-  width: 90vmin;
+  padding: 1rem;
 
   > * + * {
     margin-top: 1rem;
@@ -82,7 +81,9 @@ body {
     background-color: $light-grey;
     border-top: 1rem solid $orange;
     box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba($warm-black, 0.5);
-    padding: 3rem;
+    max-width: 80vw;
+    padding: 2rem;
+    width: 50rem;
   }
 
   @include e('divider') {
@@ -95,7 +96,8 @@ body {
 
 @include b('mymercer-logo') {
   height: auto;
-  width: 80%;
+  max-width: 80vw;
+  width: 20rem;
   @include e('my') {
     fill: $orange;
   }
