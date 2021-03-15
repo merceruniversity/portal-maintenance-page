@@ -1,0 +1,79 @@
+/*! maintenance.scss */
+/*
+ * _colors.scss
+ *
+ * Author: Interactive Design & Development
+ * Author URI: https://github.com/InteractiveDesignAndDevelopment
+ * Description: Define colors for the portal rework
+ */
+@font-face {
+  font-family: 'Orkney';
+  src: inline("orkney-light-webfont.woff2") format("woff2"), inline("orkney-light-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline("orkney-regular-webfont.woff2") format("woff2"), inline("orkney-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline("orkney-medium-webfont.woff2") format("woff2"), inline("orkney-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Orkney';
+  src: inline("orkney-bold-webfont.woff2") format("woff2"), inline("orkney-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+html {
+  box-sizing: border-box; }
+  html * {
+    box-sizing: inherit; }
+
+body {
+  align-items: center;
+  background-color: #f4f2f1;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw; }
+  @media (min-width: 48em) {
+    body {
+      background-color: #d3cbc6; } }
+
+.message {
+  color: #3f3c3b;
+  font-family: Orkney;
+  text-align: center;
+  padding: 1rem; }
+  .message > * + * {
+    margin-top: 1rem;
+    margin-bottom: 0; }
+  @media (min-width: 48em) {
+    .message {
+      background-color: #f4f2f1;
+      border-top: 1rem solid #c95106;
+      box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(63, 60, 59, 0.5);
+      max-width: 80vw;
+      padding: 2rem;
+      width: 50rem; } }
+  .message__divider {
+    background-color: #d3cbc6;
+    border: 0;
+    height: 0.2rem;
+    width: 100%; }
+
+.mymercer-logo {
+  height: auto;
+  max-width: 80vw;
+  width: 20rem; }
+  .mymercer-logo__my {
+    fill: #c95106; }
+  .mymercer-logo__mercer {
+    fill: #3f3c3b; }
